@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section id="navbar">
+        <nav>
+            <h1>Navbar</h1>
+            <div class="navbar" id="navLinks">
+                <span id="bars" style="font-size: 40px;" onclick="hideMenu()">&#9776</span>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">SERVICE</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <span id="close" style="font-size: 40px;" onclick="showMenu()">&#9776</span>
+        </nav>
+    </section>
+    <!-- <section id="home">
+        <div class="home-content">
+            <h1 class="center white">Welcome to Amazon</h1>
+            <p class="center white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, <br> architecto exercitationem quasi sint eligendi autem accusamus fugit dicta deleniti optio aliquam. <br> Animi ab praesentium optio corporis eligendi maxime facere non.</p>
+        </div>
+    </section> -->
+</body>
+
+<script>
+    let navLinks = document.getElementById('navLinks');
+    let bars = document.getElementById('bars');
+    let close = document.getElementById('close');
+
+    bars.addEventListener('click',()=>{
+        console.log('Basr is clicked');
+    })
+    close.addEventListener('click',()=>{
+        console.log('close is clicked');
+    })
+    function showMenu(){
+        navLinks.style.right = "0%";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-50%";
+    }
+</script>
+
+</html>
